@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Poppins" rel="stylesheet">
+    <script type="text/javascript" charset="utf8" src="script.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <title>Examen Front-End</title>
+</head>
+<body>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sku</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    </table>
+
+    <form>
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <a href="#">X</a>
+                <h2>• Detalles •</h2>
+                <div class="displayFlex">
+                    <p style="font-weight: bold;">Nombre:&nbsp;&nbsp;</p>
+                    <p id="nameField"></p>
+                </div>
+                <br>
+                <div class="displayFlex">
+                    <p style="font-weight: bold;">Precio:&nbsp;&nbsp;</p>
+                    <p id="priceField"></p>
+                </div>
+                <br>
+                <div class="displayFlex">
+                    <p style="font-weight: bold;">Cantidad:&nbsp;&nbsp;</p>
+                    <p id="quantityField"></p>
+                </div>
+                <br>
+                <div class="displayFlex">
+                    <p style="font-weight: bold;">Sku:&nbsp;&nbsp;&nbsp;</p>
+                    <p id="skuField"></p>
+                </div>
+                <br>
+            </div>
+
+            <div id="modal-Agregar" class="modal">
+                <div  class="modal-contenido">
+                    <a href="#">X</a>
+                    <h2 class="orderNumber">• Agregar •</h2>
+                    <div class="displayFlex">
+                        <p style="font-weight: bold;">Nombre:&nbsp;&nbsp;</p>
+                        <input type="text" id="nameField">
+                    </div>
+                    <br>
+                    <div class="displayFlex">
+                        <p style="font-weight: bold;">Precio:&nbsp;&nbsp;</p>
+                        <input type="text" id="priceField">
+                    </div>
+                    <br>
+                    <div class="displayFlex">
+                        <p style="font-weight: bold;">Cantidad:&nbsp;&nbsp;</p>
+                        <input type="text" id="quantityField">
+                    </div>
+                    <br>
+                    <div class="displayFlex">
+                        <p style="font-weight: bold;">Sku:&nbsp;&nbsp;&nbsp;</p>
+                        <input type="text" id="skuField">
+                    </div>
+                    <br>
+                    <input type="submit" id="" value="Agregar">
+                </div>
+            </div>       
+        </div>
+
+        <button onclick="modalAgregar()" href="#modal-Agregar" class="btnAgregar">Agregar</button>
+    </form> 
+</body>
+</html>
